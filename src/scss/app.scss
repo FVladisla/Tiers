@@ -1,0 +1,38 @@
+@import "./libs/normalize";
+@import "./variables";
+@import "./components/all";
+
+* {
+  font-family: "Inter", system-ui;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app{
+  height: inherit;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(0 0% 50%);
+  
+  &::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  &:hover{
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(20, 20, 20, 0.6);    /* цвет бегунка */
+    }
+  }
+
+  &::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+    margin-left: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(20, 20, 20, 0.5);    /* цвет бегунка */
+  }
+}
